@@ -56,7 +56,7 @@ body {
 
 /* Header */
 header {
-    padding: 120px 0 80px;
+    padding: 100px 0 80px;
     text-align: center;
 }
 
@@ -64,14 +64,14 @@ h1 {
     font-size: 80px;
     font-weight: 300;
     letter-spacing: 20px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     text-transform: uppercase;
 }
 
 .subtitle {
-    font-size: 18px;
+    font-size: 30px;
     font-weight: 300;
-    color: #999;
+    color: #8b8b8b;
     letter-spacing: 4px;
     text-transform: uppercase;
 }
@@ -79,15 +79,15 @@ h1 {
 /* Navigation */
 nav {
     text-align: center;
-    margin: 60px 0 100px;
+    margin: -30px 0 100px;
 }
 
 nav a {
     display: inline-block;
-    margin: 0 40px;
+    margin: 0 20px;
     color: #fff;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 30px;
     font-weight: 300;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -166,14 +166,14 @@ h2 {
 
 .experience-company {
     font-size: 18px;
-    color: #999;
+    color: #0962aa;
     margin-bottom: 20px;
     letter-spacing: 2px;
 }
 
 .experience-description {
     font-size: 16px;
-    color: #666;
+    color: #adadad;
     line-height: 1.8;
     letter-spacing: 1px;
 }
@@ -266,7 +266,7 @@ footer {
 .experience-tags li {
     background-color: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
-    color: #fff;
+    color: #10996b;
     font-size: 0.85em;
     padding: 5px 10px;
     border-radius: 20px;
@@ -280,14 +280,14 @@ footer {
 }
 
 #projets {
-    margin-top: 60px;
+    margin-top: 20px;
     padding: 40px 0;
 }
 
 .project-list {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
 }
 
 .project-item {
@@ -305,7 +305,7 @@ footer {
 
 .project-title {
     font-size: 1.5rem;
-    margin-bottom: 10px;
+    margin-bottom: 100px;
     color: #fff;
 }
 
@@ -527,4 +527,219 @@ footer {
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+.subsection {
+    margin-top: 80px;
+}
+
+.subsection h3 {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+}
+
+/* Dropdown */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #111;
+    min-width: 220px;
+    border: 1px solid #333;
+    z-index: 1000;
+    backdrop-filter: blur(6px);
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 8px 12px;
+    color: rgb(226, 26, 26);
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #222;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Grille d’images */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* Conteneur image + overlay */
+.thumbnail-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Images */
+.thumbnail-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.thumbnail-wrapper:hover img {
+    transform: scale(1.05);
+}
+
+/* Overlay pour la légende */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.thumbnail-wrapper:hover .overlay {
+    opacity: 1;
+}
+
+/* Texte de la légende */
+.caption {
+    margin: 0;
+}
+
+/* Grille classique */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* Images cliquables */
+.project-item img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.project-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Lightbox */
+#lightbox {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 8px;
+}
+
+#lightbox-caption {
+    color: #fff;
+    margin-top: 15px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#lightbox-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.youtube-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 18px;
+    border: 1px solid white;
+    text-decoration: none;
+    color: white;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+.youtube-button:hover {
+    background: white;
+    color: black;
+}
+
+
+.profile-picture img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 0.5px solid rgb(0, 0, 0);
+    image-rendering: auto;
+}
+
+.experience-title {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.experience-company-block {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.experience-logo {
+    height: 80px; /* Ajuste selon l’équilibre visuel souhaité */
+    width: auto;
+    object-fit: contain;
+}
+
+.experience-company {
+    margin: 0;
 }
