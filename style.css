@@ -151,7 +151,7 @@ h2 {
 
 .experience-date {
     font-size: 14px;
-    color: #666;
+    color: #e2e2e2;
     letter-spacing: 2px;
     text-transform: uppercase;
 }
@@ -173,7 +173,7 @@ h2 {
 
 .experience-description {
     font-size: 16px;
-    color: #adadad;
+    color: #e2e2e2;
     line-height: 1.8;
     letter-spacing: 1px;
 }
@@ -306,12 +306,12 @@ footer {
 .project-title {
     font-size: 1.5rem;
     margin-bottom: 100px;
-    color: #fff;
+    color: #e2e2e2;
 }
 
 .project-description {
     font-size: 1rem;
-    color: #ccc;
+    color: #e2e2e2;
     line-height: 1.6;
     margin-bottom: 15px;
 }
@@ -335,7 +335,7 @@ footer {
 
 #projets h2 {
     font-size: 2rem;
-    color: #fff;
+    color: #e2e2e2;
     margin-bottom: 30px;
 }
 
@@ -345,7 +345,7 @@ footer {
 
 .subsection h3 {
     font-size: 1.6rem;
-    color: #ffffff;
+    color: #e2e2e2;
     margin-bottom: 25px;
     border-left: 4px solid #ffffff;
     padding-left: 10px;
@@ -401,7 +401,7 @@ footer {
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 3rem;
-    color: #ffffff;
+    color: #e2e2e2;
     opacity: 0.8;
     text-shadow: 0 0 20px #ffffff;
     transition: transform 0.4s ease, opacity 0.3s ease;
@@ -416,13 +416,13 @@ footer {
 .film-title, .music-title, .project-title {
     font-size: 1.3rem;
     margin-top: 15px;
-    color: #fff;
+    color: #e2e2e2;
     text-shadow: 0 0 10px rgba(0,188,212,0.4);
 }
 
 .film-description, .music-description, .project-description {
     font-size: 1rem;
-    color: #ccc;
+    color: #e2e2e2;
     margin-top: 8px;
     line-height: 1.6;
 }
@@ -458,10 +458,10 @@ footer {
     position: absolute;
     top: -40px;
     right: -10px;
-    color: #ffffff;
+    color: #e2e2e2;
     font-size: 2.5rem;
     cursor: pointer;
-    text-shadow: 0 0 10px #ffffff;
+    text-shadow: 0 0 10px #e2e2e2;
     transition: transform 0.3s ease;
 }
 
