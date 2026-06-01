@@ -700,15 +700,6 @@ footer {
 }
 
 
-.profile-picture img {
-    width: 160px;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 0.5px solid rgb(0, 0, 0);
-    image-rendering: auto;
-}
-
 .experience-title {
     display: flex;
     align-items: center;
@@ -733,10 +724,9 @@ footer {
 .experience-company {
     margin: 0;
 }
-
 .profile-picture img {
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 50%;
     border: 0.5px solid rgb(0, 0, 0);
