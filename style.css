@@ -733,3 +733,13 @@ footer {
 .experience-company {
     margin: 0;
 }
+
+.profile-picture img {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 0.5px solid rgb(0, 0, 0);
+    image-rendering: -webkit-optimize-contrast; /* Chrome/Safari */
+    image-rendering: crisp-edges;               /* Firefox */
+}
