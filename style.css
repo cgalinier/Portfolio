@@ -266,12 +266,7 @@ footer {
     padding: 5px 10px;
     border-radius: 20px;
     letter-spacing: 0.5px;
-    transition: all 0.2s ease-in-out;
-}
 
-.experience-tags li:hover {
-    background-color: rgba(255, 255, 255, 0.25);
-    transform: scale(1.05);
 }
 
 #projets {
