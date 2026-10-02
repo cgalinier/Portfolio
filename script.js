@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const lightboxCaption = document.getElementById('lightbox-caption');
     const lightboxClose = document.getElementById('lightbox-close');
 
-    if(lightbox && lightboxImg && lightboxCaption && lightboxClose) {
+    if (lightbox && lightboxImg && lightboxCaption && lightboxClose) {
         document.querySelectorAll('.lightbox-trigger').forEach(img => {
             img.addEventListener('click', () => {
                 lightbox.style.display = 'flex';
@@ -63,7 +63,33 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // fermer au clic sur le fond
         lightbox.addEventListener('click', (e) => {
-            if(e.target === lightbox) lightbox.style.display = 'none';
+            if (e.target === lightbox) lightbox.style.display = 'none';
+        });
+    }
+
+    /* ================= MENU DÉROULANT (MOBILE) ================= */
+    const dropdown = document.querySelector('.dropdown');
+    const dropbtn = document.querySelector('.dropbtn');
+
+    if (dropdown && dropbtn) {
+        // Toucher sur "Projets ▾" : ouvre/ferme le menu au lieu de naviguer
+        dropbtn.addEventListener('click', (e) => {
+            if (window.matchMedia('(hover: none), (max-width: 768px)').matches) {
+                e.preventDefault();
+                dropdown.classList.toggle('open');
+            }
+        });
+
+        // Toucher sur un sous-lien : on referme le menu, la navigation se fait normalement
+        dropdown.querySelectorAll('.dropdown-content a').forEach(link => {
+            link.addEventListener('click', () => dropdown.classList.remove('open'));
+        });
+
+        // Toucher en dehors du menu : on le ferme
+        document.addEventListener('click', (e) => {
+            if (!dropdown.contains(e.target)) {
+                dropdown.classList.remove('open');
+            }
         });
     }
 

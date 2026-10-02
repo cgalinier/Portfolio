@@ -48,15 +48,12 @@ body{
 }
 
 @keyframes moveLine{
-
     0%,100%{
         transform:translateX(0);
     }
-
     50%{
         transform:translateX(100px);
     }
-
 }
 
 /* ==========================================================
@@ -189,6 +186,7 @@ nav a:hover{
     border:1px solid #333;
     backdrop-filter:blur(6px);
     z-index:999;
+    text-align:left;                /* ✅ AJOUTÉ */
 }
 
 .dropdown-content a{
@@ -205,7 +203,15 @@ nav a:hover{
     color:#6fcaac;
 }
 
-.dropdown:hover .dropdown-content{
+/* ✅ MODIFIÉ : le survol ne s'applique qu'aux appareils avec une souris */
+@media (hover:hover){
+    .dropdown:hover .dropdown-content{
+        display:block;
+    }
+}
+
+/* ✅ AJOUTÉ : ouverture au toucher (classe ajoutée par le JavaScript) */
+.dropdown.open .dropdown-content{
     display:block;
 }
 
@@ -268,7 +274,6 @@ section{
     align-items:center;
     gap:14px;
     margin-bottom:12px;
-
     font-size:28px;
     font-weight:600;
     letter-spacing:2px;
@@ -316,17 +321,11 @@ section{
 
 .experience-tags li{
     padding:6px 12px;
-
     border-radius:30px;
-
     background:rgba(255,255,255,.08);
-
     border:1px solid rgba(255,255,255,.15);
-
     color:#6fcaac;
-
     font-size:.85rem;
-
     letter-spacing:.5px;
 }
 
@@ -337,17 +336,11 @@ section{
 .about-content{
     max-width:850px;
     margin:auto;
-
     text-align:center;
-
     font-size:18px;
-
     line-height:2;
-
     color:#e8e8e8;
-
     font-weight:300;
-
     letter-spacing:.5px;
 }
 
@@ -361,24 +354,16 @@ section{
 }
 
 .contact-link{
-
     color:#fff;
-
     text-decoration:none;
-
     font-size:40px;
-
     font-weight:300;
-
     letter-spacing:5px;
-
     transition:.3s;
 }
 
 .contact-link:hover{
-
     opacity:.55;
-
 }
 
 /* ==========================================================
@@ -386,30 +371,19 @@ section{
 ========================================================== */
 
 .youtube-button{
-
     display:inline-block;
-
     margin-top:20px;
-
     padding:10px 20px;
-
     border:1px solid #fff;
-
     color:#fff;
-
     text-decoration:none;
-
     letter-spacing:1px;
-
     transition:.3s;
 }
 
 .youtube-button:hover{
-
     background:#fff;
-
     color:#000;
-
 }
 
 /* ==========================================================
@@ -417,18 +391,13 @@ section{
 ========================================================== */
 
 footer{
-
     text-align:center;
-
     padding:80px 0 40px;
-
     color:#555;
-
     font-size:12px;
-
     letter-spacing:2px;
-
 }
+
 /* ==========================================================
    PROJETS
 ========================================================== */
@@ -447,57 +416,34 @@ footer{
 ========================================================== */
 
 .projects-menu{
-
     display:flex;
-
     flex-wrap:wrap;
-
     gap:2rem;
-
     margin-bottom:60px;
-
     padding-bottom:20px;
-
     border-bottom:1px solid #333;
-
 }
 
 .tab-button{
-
     background:none;
-
     border:none;
-
     color:#fff;
-
     cursor:pointer;
-
     font-size:.9rem;
-
     letter-spacing:.20em;
-
     text-transform:uppercase;
-
     opacity:.45;
-
     transition:.3s;
-
 }
 
 .tab-button:hover{
-
     opacity:1;
-
 }
 
 .tab-button.active{
-
     opacity:1;
-
     border-bottom:1px solid #fff;
-
     padding-bottom:8px;
-
 }
 
 /* ==========================================================
@@ -505,33 +451,21 @@ footer{
 ========================================================== */
 
 .tab-content{
-
     display:none;
-
     animation:fadeIn .4s ease;
-
 }
 
 .tab-content.active{
-
     display:block;
-
 }
 
 @keyframes fadeIn{
-
     from{
-
         opacity:0;
-
     }
-
     to{
-
         opacity:1;
-
     }
-
 }
 
 /* ==========================================================
@@ -539,25 +473,16 @@ footer{
 ========================================================== */
 
 .subsection{
-
     margin-top:80px;
-
 }
 
 .subsection h3{
-
     margin-bottom:35px;
-
     padding-bottom:10px;
-
     border-bottom:1px solid #333;
-
     font-size:1.1rem;
-
     letter-spacing:2px;
-
     text-transform:uppercase;
-
 }
 
 /* ==========================================================
@@ -568,13 +493,9 @@ footer{
 .project-list,
 .film-grid,
 .music-grid{
-
     display:grid;
-
     grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-
     gap:35px;
-
 }
 
 /* ==========================================================
@@ -582,15 +503,11 @@ footer{
 ========================================================== */
 
 .project-item{
-
     transition:.35s;
-
 }
 
 .project-item:hover{
-
     transform:translateY(-6px);
-
 }
 
 /* ==========================================================
@@ -598,49 +515,35 @@ footer{
 ========================================================== */
 
 .thumbnail-wrapper{
-
     position:relative;
-
     overflow:hidden;
-
     border-radius:16px;
-
     cursor:pointer;
-
     background:#111;
-
     box-shadow:0 0 20px rgba(255,255,255,.08);
-
     transition:.35s;
-
 }
 
 .thumbnail-wrapper:hover{
-
     box-shadow:0 0 28px rgba(255,255,255,.18);
+}
 
+.thumbnail-wrapper a{                /* ✅ AJOUTÉ : le lien couvre toute la vignette */
+    display:block;
+    position:relative;
 }
 
 .thumbnail-wrapper img{
-
     display:block;
-
     width:100%;
-
     aspect-ratio:16/9;
-
     object-fit:cover;
-
     transition:.45s;
-
 }
 
 .thumbnail-wrapper:hover img{
-
     transform:scale(1.05);
-
     filter:brightness(1.1);
-
 }
 
 /* ==========================================================
@@ -648,42 +551,27 @@ footer{
 ========================================================== */
 
 .overlay{
-
     position:absolute;
-
     inset:0;
-
     display:flex;
-
     align-items:flex-end;
-
     padding:18px;
-
     background:linear-gradient(
         transparent 45%,
         rgba(0,0,0,.80)
     );
-
     opacity:0;
-
     transition:.35s;
-
 }
 
 .thumbnail-wrapper:hover .overlay{
-
     opacity:1;
-
 }
 
 .caption{
-
     color:#fff;
-
     font-size:.95rem;
-
     line-height:1.5;
-
 }
 
 /* ==========================================================
@@ -691,207 +579,134 @@ footer{
 ========================================================== */
 
 .play-icon{
-
     position:absolute;
-
     top:50%;
-
     left:50%;
-
     transform:translate(-50%,-50%);
-
     font-size:3rem;
-
     color:#fff;
-
     opacity:.8;
-
     transition:.35s;
-
     text-shadow:0 0 20px rgba(255,255,255,.7);
-
 }
 
 .thumbnail-wrapper:hover .play-icon{
-
     transform:translate(-50%,-50%) scale(1.18);
-
     opacity:1;
-
 }
 
 /* ==========================================================
-   TITRES
+   TITRES PROJETS
 ========================================================== */
 
 .project-title,
 .music-title,
 .film-title{
-
     margin-top:18px;
-
     font-size:1.25rem;
-
     font-weight:500;
-
     color:#fff;
-
     letter-spacing:.5px;
-
 }
 
 .project-description,
 .music-description,
 .film-description{
-
     margin-top:10px;
-
     color:#d8d8d8;
-
     line-height:1.7;
-
     font-size:.97rem;
-
 }
+
+/* ✅ AJOUTÉ : légende sous les vidéos de la section Graphisme */
+.video-caption{
+    margin-top:10px;
+    font-size:.95rem;
+    text-align:center;
+    color:#d8d8d8;
+}
+
 /* ==========================================================
    MODALE YOUTUBE
 ========================================================== */
 
 .modal{
-
     display:none;
-
     position:fixed;
-
     inset:0;
-
     z-index:1000;
-
     align-items:center;
-
     justify-content:center;
-
     background:rgba(0,0,0,.92);
-
     backdrop-filter:blur(5px);
-
 }
 
 .modal-content{
-
     position:relative;
-
     width:80%;
-
     max-width:900px;
-
     aspect-ratio:16/9;
-
 }
 
 .modal-content iframe{
-
     width:100%;
-
     height:100%;
-
     border:none;
-
     border-radius:12px;
-
 }
 
 .close{
-
     position:absolute;
-
     top:-45px;
-
     right:-10px;
-
     color:#fff;
-
     font-size:2.5rem;
-
     cursor:pointer;
-
     transition:.3s;
-
 }
 
 .close:hover{
-
     transform:scale(1.2);
-
     opacity:.7;
-
 }
-
 
 /* ==========================================================
    LIGHTBOX IMAGES
 ========================================================== */
 
 #lightbox{
-
     display:none;
-
     position:fixed;
-
     inset:0;
-
     z-index:2000;
-
     align-items:center;
-
     justify-content:center;
-
     flex-direction:column;
-
     padding:20px;
-
     background:rgba(0,0,0,.95);
-
 }
 
 #lightbox img{
-
     max-width:90%;
-
     max-height:80%;
-
     border-radius:10px;
-
 }
 
 #lightbox-caption{
-
     margin-top:20px;
-
     color:#fff;
-
     text-align:center;
-
     font-size:1rem;
-
 }
 
 #lightbox-close{
-
     position:absolute;
-
     top:25px;
-
     right:35px;
-
     color:#fff;
-
     font-size:2.5rem;
-
     cursor:pointer;
-
 }
-
 
 /* ==========================================================
    RESPONSIVE TABLETTE / MOBILE
@@ -899,464 +714,288 @@ footer{
 
 @media(max-width:900px){
 
-
     .container{
-
         padding:0 25px;
-
     }
-
 
     h1{
-
         font-size:55px;
-
         letter-spacing:10px;
-
     }
-
 
     .name{
-
         font-size:3rem;
-
     }
-
 
     .subtitle{
-
         font-size:22px;
-
         letter-spacing:3px;
-
     }
-
 
     h2{
-
         font-size:32px;
-
         letter-spacing:6px;
-
     }
-
 
     nav{
-
         margin-bottom:60px;
-
     }
-
 
     nav a{
-
         display:block;
-
         margin:20px 0;
-
         font-size:22px;
-
     }
 
+    /* ✅ AJOUTÉ : menu déroulant adapté au mobile */
+    .dropdown{
+        display:block;
+    }
+
+    .dropdown-content{
+        left:50%;
+        transform:translateX(-50%);
+        width:90%;
+        max-width:320px;
+    }
+
+    .dropdown-content a{
+        margin:0;
+        font-size:1rem;
+        padding:14px 16px;
+        letter-spacing:1px;
+    }
 
     .projects-menu{
-
         flex-direction:column;
-
         gap:20px;
-
     }
-
 
     .project-grid,
     .project-list,
     .film-grid,
     .music-grid{
-
         grid-template-columns:1fr;
-
     }
-
 
     .experience-header{
-
         flex-direction:column;
-
         align-items:flex-start;
-
     }
-
 
     .experience-number{
-
         font-size:42px;
-
     }
-
 
     .experience-title{
-
         font-size:22px;
-
         flex-wrap:wrap;
-
     }
-
 
     .experience-company-block{
-
         flex-direction:column;
-
         align-items:flex-start;
-
     }
-
 
     .experience-logo{
-
         height:60px;
-
     }
-
 
     .contact-link{
-
         font-size:24px;
-
         letter-spacing:3px;
-
     }
-
 
     .profile-picture img{
-
         width:150px;
-
         height:150px;
-
     }
-
 }
-
 
 @media(max-width:480px){
 
-
     .container{
-
         padding:0 15px;
-
     }
-
 
     header{
-
         padding:60px 0;
-
     }
-
 
     .name{
-
         font-size:2.2rem;
-
         letter-spacing:.08em;
-
     }
-
 
     h1{
-
         font-size:40px;
-
     }
-
 
     h2{
-
         font-size:26px;
-
     }
-
 
     .experience-description{
-
         font-size:15px;
-
     }
-
-
 }
+
 /* ==========================================================
    CARTES DE PUBLICATIONS / LIENS
 ========================================================== */
 
 .link-card{
-
     display:flex;
-
     align-items:center;
-
     justify-content:space-between;
-
     gap:25px;
-
     padding:25px 30px;
-
     margin-bottom:20px;
-
     background:rgba(255,255,255,.04);
-
     border:1px solid rgba(255,255,255,.15);
-
     border-radius:14px;
-
     text-decoration:none;
-
     color:#fff;
-
     transition:.35s ease;
-
 }
-
 
 .link-card:hover{
-
     transform:translateY(-5px);
-
     background:rgba(255,255,255,.08);
-
     border-color:#fff;
-
 }
-
-
-/* Texte carte */
 
 .link-card-content{
-
     flex:1;
-
 }
-
 
 .link-card-title{
-
     font-size:1.3rem;
-
     letter-spacing:2px;
-
     text-transform:uppercase;
-
     margin-bottom:8px;
-
 }
-
 
 .link-card-description{
-
     color:#ccc;
-
     font-size:.95rem;
-
     line-height:1.6;
-
 }
-
-
-/* Icône / flèche */
 
 .link-card-icon{
-
     font-size:2rem;
-
     color:#6fcaac;
-
     transition:.3s;
-
 }
-
 
 .link-card:hover .link-card-icon{
-
     transform:translateX(8px);
-
 }
-
-
 
 /* ==========================================================
    LIENS EXTERNES
 ========================================================== */
 
 .external-link{
-
     display:inline-flex;
-
     align-items:center;
-
     gap:10px;
-
     margin-top:20px;
-
     padding:10px 20px;
-
     border:1px solid #fff;
-
     color:#fff;
-
     text-decoration:none;
-
     text-transform:uppercase;
-
     letter-spacing:2px;
-
     font-size:.85rem;
-
     transition:.3s;
-
 }
-
 
 .external-link:hover{
-
     background:#fff;
-
     color:#000;
-
 }
-
-
 
 /* ==========================================================
    SEPARATEURS VISUELS
 ========================================================== */
 
 .section-line{
-
     width:100%;
-
     height:1px;
-
     background:#333;
-
     margin:60px 0;
-
 }
-
-
 
 /* ==========================================================
    LIENS GENERAUX
 ========================================================== */
 
 a{
-
     transition:.3s ease;
-
 }
-
 
 a:hover{
-
     opacity:.8;
-
 }
-
-
 
 /* ==========================================================
    SCROLLBAR PERSONNALISEE
 ========================================================== */
 
 ::-webkit-scrollbar{
-
     width:8px;
-
 }
-
 
 ::-webkit-scrollbar-track{
-
     background:#000;
-
 }
-
 
 ::-webkit-scrollbar-thumb{
-
     background:#333;
-
     border-radius:10px;
-
 }
-
 
 ::-webkit-scrollbar-thumb:hover{
-
     background:#666;
-
 }
-
-
 
 /* ==========================================================
    SELECTION TEXTE
 ========================================================== */
 
 ::selection{
-
     background:#fff;
-
     color:#000;
-
 }
-
-
 
 /* ==========================================================
    PETITES CORRECTIONS FINALES
 ========================================================== */
 
-
-/* évite que les images débordent */
-
 img{
-
     max-width:100%;
-
 }
-
-
-/* meilleure lecture des longs textes */
 
 p{
-
     max-width:900px;
-
 }
-
-
-
-/* alignement propre des boutons */
 
 button{
-
     font-family:inherit;
-
 }
 
-.experience-photo {
-    margin-top: 16px;
-    height: 120px;       
-    width: auto;
-    border-radius: 6px;
-    object-fit: contain;
-    opacity: 0.85;
-    display: block;
-    transition: opacity 0.3s ease;
+.experience-photo{
+    margin-top:16px;
+    height:120px;
+    width:auto;
+    border-radius:6px;
+    object-fit:contain;
+    opacity:0.85;
+    display:block;
+    transition:opacity 0.3s ease;
 }
 
-.experience-photo:hover {
-    opacity: 1;
+.experience-photo:hover{
+    opacity:1;
 }
