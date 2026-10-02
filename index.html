@@ -3,544 +3,524 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <title>Portfolio – Corentin Galinier</title>
+    <link rel="stylesheet" href="style.css?v=6">
+    <script src="script.js?v=6" defer></script>
 </head>
 <body>
-    <!-- Lignes verticales blanches -->
-    <div class="lines-container" id="linesContainer"></div>
 
     <div class="container">
-        <!-- Header -->
+
+        <!-- ================= HEADER ================= -->
         <header>
             <div class="profile-picture">
-        <img src="images/profil.jpg" alt="Photo de profil Corentin Galinier">
-        </div>
+                <img src="images/profil.jpg" alt="Photo de profil Corentin Galinier">
+            </div>
             <h1 class="name">
-            <span>CORENTIN</span>
-            <span>GALINIER</span>
+                <span>CORENTIN</span>
+                <span>GALINIER</span>
             </h1>
             <p class="subtitle">Portfolio</p>
         </header>
 
-        <!-- Navigation -->
+        <!-- ================= NAVIGATION ================= -->
         <nav>
-    <a href="#experiences">Expériences Pro</a>
-    <a href="#stages">Stages</a>
-    <div class="dropdown">
-        <a href="#projets" class="dropbtn">Projets ▾</a>
-        <div class="dropdown-content">
-            <a href="#publications">Publications scientifiques</a>
-            <a href="#communication">Communication visuelle – Graphisme</a>
-            <a href="#films">Films courts</a>
-            <a href="#musique">Créations musicales</a>
-        </div>
-    </div>
-
-</nav>
-
-        <!-- Section Expériences Professionnelles -->
-<section id="experiences">
-    <h2>Expériences Professionnelles</h2>
-    <div class="experience-list">
-
-<!-- Expérience 1 -->
-<div class="experience-item">
-    <div class="experience-header">
-        <div class="experience-date">1 an 4 mois • Sept 2024 - Déc 2025</div>
-    </div>
-
-    <h3 class="experience-title">
-        ASSISTANT INGÉNIEUR
-    </h3>
-
-    <div class="experience-company-block">
-        <img src="images/liec.png" alt="Logo LIEC" class="experience-logo">
-        <p class="experience-company">
-            Laboratoire Interdisciplinaire des Environnements Continentaux • METZ, FRANCE
-        </p>
-    </div>
-
-    <p class="experience-description">
-        Acquisition, bancarisation et analyse d’images de diatomées en microscopie optique DIC, dans le cadre du projet européen iMagine (Imaging data and services for aquatic science).
-    </p>
-    
-            <!-- Liste de compétences / mots-clés -->
-            <ul class="experience-tags">
-                <li>Microscopie optique (Zeiss Axio Imager M2)</li>
-                <li>Gestion de base de données</li>
-                <li>Outils de segmentation d'images</li>
-                <li>Deep Learning CNN</li>
-                <li>Python</li>
-                <li>Médiation scientifique</li>
-            </ul>
-        </div>
-
-    
-        <!-- Expérience 2 -->
-<div class="experience-item">
-    <div class="experience-header">
-        <div class="experience-date">• Fév 2025</div>
-    </div>
-
-    <h3 class="experience-title">
-        MÉDIATEUR SCIENTIFIQUE
-    </h3>
-
-    <div class="experience-company-block">
-        <img src="images/vigie.png" alt="Logo Vigie de l'eau" class="experience-logo">
-        <p class="experience-company">
-            Vigie de l'eau • VITTEL, FRANCE
-        </p>
-    </div>
-
-    <p class="experience-description">
-        Encadrement de lycéens dans le cadre de la démarche scientifique : étude de cas d'une pollution aquatique – Test d'écotoxicologie aquatique (Test Daphnie).
-    </p>
-
-    <ul class="experience-tags">
-        <li>Médiation scientifique</li>
-        <li>Encadrement</li>
-        <li>Pédagogie</li>
-        <li>Écotoxicologie aquatique</li>
-    </ul>
-</div>
-
-    </div>
-
-<!-- Section Stages -->
-<section id="stages">
-    <h2>Stages</h2>
-
-    <div class="experience-list">
-
-        <!-- Stage Master 2 -->
-        <div class="experience-item">
-            <div class="experience-header">
-                <div class="experience-date">6 mois • Fév - Août 2023</div>
+            <a href="#experiences">Expériences Pro</a>
+            <a href="#stages">Stages</a>
+            <div class="dropdown">
+                <a href="#projets" class="dropbtn">Projets ▾</a>
+                <div class="dropdown-content">
+                    <a href="#publications">Publications scientifiques</a>
+                    <a href="#communication">Communication visuelle – Graphisme</a>
+                    <a href="#films">Films courts</a>
+                    <a href="#musique">Créations musicales</a>
+                </div>
             </div>
+        </nav>
 
-            <h3 class="experience-title">MASTER 2</h3>
+        <!-- ================= EXPÉRIENCES PROFESSIONNELLES ================= -->
+        <section id="experiences">
+            <h2>Expériences Professionnelles</h2>
 
-            <div class="experience-company-block">
-                <img src="images/sebio.png" alt="Logo SEBIO" class="experience-logo">
-                <p class="experience-company">
-                    UMR-I 02 SEBIO (Stress Environnementaux et BIOsurveillance des milieux aquatiques), Université Le Havre Normandie
-                </p>
-            </div>
+            <div class="experience-list">
 
-            <p class="experience-description">
-                Interactions entre les diatomées toxiques du genre <em>Pseudo-nitzschia</em> 
-                et les consommateurs primaires : étude comportementale chez 
-                le copépode marin <em>Temora longicornis</em>.
-            </p>
-
-            <ul class="experience-tags">
-                <li>Tracking vidéo du zooplancton (Noldus, EthoVision XT)</li>
-                <li>Analyses immunoenzymatiques</li>
-                <li>Adobe Illustrator</li>
-                <li>Échantillonnage et maintien de zooplancton</li>
-                <li>Automatisation</li>
-                <li>Culture de microalgues</li>
-            </ul>
-
-            <img src="images/lh.png" 
-     alt="Stage Master 2 – Le Havre" 
-     class="experience-photo lightbox-trigger"
-     data-caption="Stage Master 2 – Échantillonnage du zooplancton">
-        </div>
-
-        <!-- Stage Master 1 -->
-        <div class="experience-item">
-            <div class="experience-header">
-                <div class="experience-date">2 mois • AVR - JUIN 2022</div>
-            </div>
-
-            <h3 class="experience-title">MASTER 1</h3>
-
-            <div class="experience-company-block">
-                <img src="images/sebio.png" alt="Logo SEBIO" class="experience-logo">
-                <p class="experience-company">
-                    UMR-I 02 SEBIO (Stress Environnementaux et BIOsurveillance des milieux aquatiques), 
-                    Université de Reims Champagne-Ardenne
-                </p>
-            </div>
-
-            <p class="experience-description">
-                Optimisation du test des comètes chez une espèce sentinelle d’eau douce 
-                (<em>Dreissena polymorpha</em>) afin de distinguer et quantifier les dommages 
-                à l’ADN des cellules germinales mâles.
-            </p>
-
-            <ul class="experience-tags">
-                <li>Test des comètes</li>
-                <li>Logiciel Evos-Comet Assay IV™</li>
-                <li>Cytométrie en flux</li>
-                <li>Adobe Illustrator</li>
-            </ul>
-        </div>
-
-        <!-- Stage DUT 2 -->
-        <div class="experience-item">
-            <div class="experience-header">
-                <div class="experience-date">2 mois • AVR - JUIN 2019</div>
-            </div>
-
-            <h3 class="experience-title">DUT 2</h3>
-
-            <div class="experience-company-block">
-                <img src="images/uvigo.png" alt="Logo VIGO" class="experience-logo">
-                <p class="experience-company">
-                    Faculté de Biologie, Université de Vigo • Espagne
-                </p>
-            </div>
-
-            <p class="experience-description">
-                Étude de la régulation de la sérotonine intestinale par l’action de peptides 
-                (GLP, CCK) liés à la digestion, chez la truite-arc-en-ciel 
-                <em>Oncorhynchus mykiss</em>.
-            </p>
-
-            <ul class="experience-tags">
-                <li>HPLC</li>
-                <li>PCR quantitative</li>
-            </ul>
-        </div>
-
-        <!-- Stage DUT 1 -->
-        <div class="experience-item">
-            <div class="experience-header">
-                <div class="experience-date">1 mois • FÉV 2018</div>
-            </div>
-
-            <h3 class="experience-title">DUT 1</h3>
-
-            <p class="experience-company">
-                Clinique vétérinaire de la Tuilerie • Saran
-            </p>
-
-            <p class="experience-description">
-                Appréhension du fonctionnement d’une entreprise en lien avec la biologie, 
-                à travers la cohésion d’une équipe d’assistantes et de docteurs vétérinaires.
-            </p>
-        </div>
-
-    </div>
-</section>
-
-       <!-- Section Projets -->
-<section id="projets" class="container">
-    <h2>Projets</h2>
-
-
- <!-- PUBLICATIONS SCIENTIFIQUES -->
-<div class="subsection" id="publications">
-
-    <h3>Publications scientifiques</h3>
-
-    <div class="project-grid">
-
-     <!-- DIATLAS -->
-<div class="project-item">
-
-    <h4 class="project-title">
-        DIATLAS - The French freshwater DIatom ATLAS image dataset
-    </h4>
-
-    <p class="project-description">
-        This dataset contains photonic (optical) microscopy images of diatoms 
-        extracted from French regional atlases, documenting specimens collected 
-        from freshwater streams.
-    </p>
-
-    <div class="thumbnail-wrapper">
-
-        <a href="https://zenodo.org/records/16260887" 
-           target="_blank" 
-           rel="noopener">
-
-            <img src="images/diatlas.png" 
-                 alt="DIATLAS dataset">
-
-            <div class="overlay"></div>
-
-            <div class="play-icon">
-                ↗
-            </div>
-
-        </a>
-
-    </div>
-
-</div>
-
-
-        <!-- SAMourAI -->
-        <div class="project-item">
-
-            <h4 class="project-title">
-                SAMourAI - Image Segmentation Tool
-            </h4>
-
-            <p class="project-description">
-                SAMourAI is a tool for semi-automatic image segmentation, built on SAM 2,
-                developed by Meta (Facebook Research). It provides a graphical interface
-                to perform image segmentation (binary masks .png), available in both CPU
-                and GPU modes.
-            </p>
-
-            <div class="thumbnail-wrapper">
-
-                <a href="https://www.youtube.com/watch?v=rUcDzOD7bgo" 
-                   target="_blank" 
-                   rel="noopener">
-
-                    <img src="images/ui_samourai.png" 
-                         alt="SAMourAI">
-
-                    <div class="overlay"></div>
-
-                    <div class="play-icon">
-                        ▶
+                <!-- Expérience 1 -->
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-date">1 an 4 mois • Sept 2024 - Déc 2025</div>
                     </div>
 
-                </a>
+                    <h3 class="experience-title">ASSISTANT INGÉNIEUR</h3>
+
+                    <div class="experience-company-block">
+                        <img src="images/liec.png" alt="Logo LIEC" class="experience-logo">
+                        <p class="experience-company">
+                            Laboratoire Interdisciplinaire des Environnements Continentaux • METZ, FRANCE
+                        </p>
+                    </div>
+
+                    <p class="experience-description">
+                        Acquisition, bancarisation et analyse d’images de diatomées en microscopie optique DIC, dans le cadre du projet européen iMagine (Imaging data and services for aquatic science).
+                    </p>
+
+                    <ul class="experience-tags">
+                        <li>Microscopie optique (Zeiss Axio Imager M2)</li>
+                        <li>Gestion de base de données</li>
+                        <li>Outils de segmentation d'images</li>
+                        <li>Deep Learning CNN</li>
+                        <li>Python</li>
+                        <li>Médiation scientifique</li>
+                    </ul>
+                </div>
+
+                <!-- Expérience 2 -->
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-date">• Fév 2025</div>
+                    </div>
+
+                    <h3 class="experience-title">MÉDIATEUR SCIENTIFIQUE</h3>
+
+                    <div class="experience-company-block">
+                        <img src="images/vigie.png" alt="Logo Vigie de l'eau" class="experience-logo">
+                        <p class="experience-company">
+                            Vigie de l'eau • VITTEL, FRANCE
+                        </p>
+                    </div>
+
+                    <p class="experience-description">
+                        Encadrement de lycéens dans le cadre de la démarche scientifique : étude de cas d'une pollution aquatique – Test d'écotoxicologie aquatique (Test Daphnie).
+                    </p>
+
+                    <ul class="experience-tags">
+                        <li>Médiation scientifique</li>
+                        <li>Encadrement</li>
+                        <li>Pédagogie</li>
+                        <li>Écotoxicologie aquatique</li>
+                    </ul>
+                </div>
 
             </div>
+        </section>
 
-        </div>
+        <!-- ================= STAGES ================= -->
+        <section id="stages">
+            <h2>Stages</h2>
 
-    </div>
+            <div class="experience-list">
 
-</div>
+                <!-- Stage Master 2 -->
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-date">6 mois • Fév - Août 2023</div>
+                    </div>
 
-    <!-- COMMUNICATION VISUELLE - GRAPHISME -->
-<div class="subsection" id="communication">
-    <h3>Communication visuelle — Graphisme</h3>
-<!-- VIDEO 1 -->
-        <div class="project-item">
-            <div class="thumbnail-wrapper">
-                <a href="https://youtu.be/YohSrRx042I?si=iMnlj0NLfmZWBNLC"
-                   target="_blank"
-                   rel="noopener"
-                   aria-label="Voir la vidéo : Retour d'expérience">
-                    <img src="images/LUCHEY_minia.png"
-                         alt="Retour d'expérience"
-                         loading="lazy">
-                    <div class="overlay"></div>
-                    <div class="play-icon">▶</div>
-                </a>
+                    <h3 class="experience-title">MASTER 2</h3>
+
+                    <div class="experience-company-block">
+                        <img src="images/sebio.png" alt="Logo SEBIO" class="experience-logo">
+                        <p class="experience-company">
+                            UMR-I 02 SEBIO (Stress Environnementaux et BIOsurveillance des milieux aquatiques), Université Le Havre Normandie
+                        </p>
+                    </div>
+
+                    <p class="experience-description">
+                        Interactions entre les diatomées toxiques du genre <em>Pseudo-nitzschia</em>
+                        et les consommateurs primaires : étude comportementale chez
+                        le copépode marin <em>Temora longicornis</em>.
+                    </p>
+
+                    <ul class="experience-tags">
+                        <li>Tracking vidéo du zooplancton (Noldus, EthoVision XT)</li>
+                        <li>Analyses immunoenzymatiques</li>
+                        <li>Adobe Illustrator</li>
+                        <li>Échantillonnage et maintien de zooplancton</li>
+                        <li>Automatisation</li>
+                        <li>Culture de microalgues</li>
+                    </ul>
+
+                    <img src="images/lh.png"
+                         alt="Stage Master 2 – Le Havre"
+                         class="experience-photo lightbox-trigger"
+                         data-caption="Stage Master 2 – Échantillonnage du zooplancton">
+                </div>
+
+                <!-- Stage Master 1 -->
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-date">2 mois • AVR - JUIN 2022</div>
+                    </div>
+
+                    <h3 class="experience-title">MASTER 1</h3>
+
+                    <div class="experience-company-block">
+                        <img src="images/sebio.png" alt="Logo SEBIO" class="experience-logo">
+                        <p class="experience-company">
+                            UMR-I 02 SEBIO (Stress Environnementaux et BIOsurveillance des milieux aquatiques),
+                            Université de Reims Champagne-Ardenne
+                        </p>
+                    </div>
+
+                    <p class="experience-description">
+                        Optimisation du test des comètes chez une espèce sentinelle d’eau douce
+                        (<em>Dreissena polymorpha</em>) afin de distinguer et quantifier les dommages
+                        à l’ADN des cellules germinales mâles.
+                    </p>
+
+                    <ul class="experience-tags">
+                        <li>Test des comètes</li>
+                        <li>Logiciel Evos-Comet Assay IV™</li>
+                        <li>Cytométrie en flux</li>
+                        <li>Adobe Illustrator</li>
+                    </ul>
+                </div>
+
+                <!-- Stage DUT 2 -->
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-date">2 mois • AVR - JUIN 2019</div>
+                    </div>
+
+                    <h3 class="experience-title">DUT 2</h3>
+
+                    <div class="experience-company-block">
+                        <img src="images/uvigo.png" alt="Logo Université de Vigo" class="experience-logo">
+                        <p class="experience-company">
+                            Faculté de Biologie, Université de Vigo • Espagne
+                        </p>
+                    </div>
+
+                    <p class="experience-description">
+                        Étude de la régulation de la sérotonine intestinale par l’action de peptides
+                        (GLP, CCK) liés à la digestion, chez la truite-arc-en-ciel
+                        <em>Oncorhynchus mykiss</em>.
+                    </p>
+
+                    <ul class="experience-tags">
+                        <li>HPLC</li>
+                        <li>PCR quantitative</li>
+                    </ul>
+                </div>
+
+                <!-- Stage DUT 1 -->
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div class="experience-date">1 mois • FÉV 2018</div>
+                    </div>
+
+                    <h3 class="experience-title">DUT 1</h3>
+
+                    <p class="experience-company">
+                        Clinique vétérinaire de la Tuilerie • Saran
+                    </p>
+
+                    <p class="experience-description">
+                        Appréhension du fonctionnement d’une entreprise en lien avec la biologie,
+                        à travers la cohésion d’une équipe d’assistantes et de docteurs vétérinaires.
+                    </p>
+                </div>
+
             </div>
-            <p class="video-caption">Retour d'expérience</p>
-        </div>
+        </section>
 
-        <!-- VIDEO 2 -->
-        <div class="project-item">
-            <div class="thumbnail-wrapper">
-                <a href="https://youtu.be/c01jsyvGiGI?si=sLCHZF6eR-BYr3A-"
-                   target="_blank"
-                   rel="noopener"
-                   aria-label="Voir la vidéo : Retour d'expérience">
-                    <img src="images/LACOUR_minia.png"
-                         alt="Retour d'expérience"
-                         loading="lazy">
-                    <div class="overlay"></div>
-                    <div class="play-icon">▶</div>
-                </a>
+        <!-- ================= PROJETS ================= -->
+        <section id="projets">
+            <h2>Projets</h2>
+
+            <!-- ---------- PUBLICATIONS SCIENTIFIQUES ---------- -->
+            <div class="subsection" id="publications">
+                <h3>Publications scientifiques</h3>
+
+                <div class="project-grid">
+
+                    <!-- DIATLAS -->
+                    <div class="project-item">
+                        <h4 class="project-title">
+                            DIATLAS - The French freshwater DIatom ATLAS image dataset
+                        </h4>
+
+                        <p class="project-description">
+                            This dataset contains photonic (optical) microscopy images of diatoms
+                            extracted from French regional atlases, documenting specimens collected
+                            from freshwater streams.
+                        </p>
+
+                        <div class="thumbnail-wrapper">
+                            <a href="https://zenodo.org/records/16260887"
+                               target="_blank"
+                               rel="noopener">
+                                <img src="images/diatlas.png" alt="DIATLAS dataset">
+                                <div class="overlay"></div>
+                                <div class="play-icon">↗</div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- SAMourAI -->
+                    <div class="project-item">
+                        <h4 class="project-title">
+                            SAMourAI - Image Segmentation Tool
+                        </h4>
+
+                        <p class="project-description">
+                            SAMourAI is a tool for semi-automatic image segmentation, built on SAM 2,
+                            developed by Meta (Facebook Research). It provides a graphical interface
+                            to perform image segmentation (binary masks .png), available in both CPU
+                            and GPU modes.
+                        </p>
+
+                        <div class="thumbnail-wrapper">
+                            <a href="https://www.youtube.com/watch?v=rUcDzOD7bgo"
+                               target="_blank"
+                               rel="noopener">
+                                <img src="images/ui_samourai.png" alt="SAMourAI">
+                                <div class="overlay"></div>
+                                <div class="play-icon">▶</div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            <p class="video-caption">Retour d'expérience</p>
-        </div>
 
-        <!-- VIDEO 3 -->
-        <div class="project-item">
-            <div class="thumbnail-wrapper">
-                <a href="https://youtu.be/V71gZr9tC2w?si=sfCF1Plk31W2bF7I"
-                   target="_blank"
-                   rel="noopener"
-                   aria-label="Voir la vidéo : Retour d'expérience">
-                    <img src="images/GAEC_minia.png"
-                         alt="Retour d'expérience"
-                         loading="lazy">
-                    <div class="overlay"></div>
-                    <div class="play-icon">▶</div>
-                </a>
+            <!-- ---------- COMMUNICATION VISUELLE - GRAPHISME ---------- -->
+            <div class="subsection" id="communication">
+                <h3>Communication visuelle — Graphisme</h3>
+
+                <div class="project-grid">
+
+                    <!-- Vidéo 1 -->
+                    <div class="project-item">
+                        <div class="thumbnail-wrapper">
+                            <a href="https://youtu.be/YohSrRx042I"
+                               target="_blank"
+                               rel="noopener"
+                               aria-label="Voir la vidéo : Retour d'expérience">
+                                <img src="images/LUCHEY_minia.png"
+                                     alt="Retour d'expérience"
+                                     loading="lazy">
+                                <div class="overlay"></div>
+                                <div class="play-icon">▶</div>
+                            </a>
+                        </div>
+                        <p class="video-caption">Retour d'expérience</p>
+                    </div>
+
+                    <!-- Vidéo 2 -->
+                    <div class="project-item">
+                        <div class="thumbnail-wrapper">
+                            <a href="https://youtu.be/c01jsyvGiGI"
+                               target="_blank"
+                               rel="noopener"
+                               aria-label="Voir la vidéo : Retour d'expérience">
+                                <img src="images/LACOUR_minia.png"
+                                     alt="Retour d'expérience"
+                                     loading="lazy">
+                                <div class="overlay"></div>
+                                <div class="play-icon">▶</div>
+                            </a>
+                        </div>
+                        <p class="video-caption">Retour d'expérience</p>
+                    </div>
+
+                    <!-- Vidéo 3 -->
+                    <div class="project-item">
+                        <div class="thumbnail-wrapper">
+                            <a href="https://youtu.be/V71gZr9tC2w"
+                               target="_blank"
+                               rel="noopener"
+                               aria-label="Voir la vidéo : Retour d'expérience">
+                                <img src="images/GAEC_minia.png"
+                                     alt="Retour d'expérience"
+                                     loading="lazy">
+                                <div class="overlay"></div>
+                                <div class="play-icon">▶</div>
+                            </a>
+                        </div>
+                        <p class="video-caption">Retour d'expérience</p>
+                    </div>
+
+                    <!-- Visuels -->
+                    <div class="project-item">
+                        <img src="images/logos_bse.png"
+                             alt="Planche concept – Logo de l'association du Master BSE de l'URCA (2023-2024)"
+                             class="lightbox-trigger"
+                             data-caption="Planche concept – Logo de l'association du Master BSE de l'URCA (2023-2024)">
+                    </div>
+
+                    <div class="project-item">
+                        <img src="images/poster_laser.png"
+                             alt="Poster Association BSE"
+                             class="lightbox-trigger"
+                             data-caption="Poster Association BSE">
+                    </div>
+
+                    <div class="project-item">
+                        <img src="images/deforestation.png"
+                             alt="Visuel concept déforestation"
+                             class="lightbox-trigger"
+                             data-caption="DÉFORESTATION - Concept">
+                    </div>
+
+                    <div class="project-item">
+                        <img src="images/oilspill1.png"
+                             alt="Visuel concept oil spill 1"
+                             class="lightbox-trigger"
+                             data-caption="OIL SPILL - Concept 1">
+                    </div>
+
+                    <div class="project-item">
+                        <img src="images/vertigo.png"
+                             alt="Visuel concept oil spill 2"
+                             class="lightbox-trigger"
+                             data-caption="OIL SPILL - Concept 2">
+                    </div>
+
+                    <div class="project-item">
+                        <img src="images/overlay.png"
+                             alt="Visuel overlay podcast"
+                             class="lightbox-trigger"
+                             data-caption="Overlay du Podcast - Point de Sauvegarde">
+                    </div>
+
+                </div>
             </div>
-            <p class="video-caption">Retour d'expérience</p>
-        </div>
 
+            <!-- ---------- FILMS COURTS ---------- -->
+            <div class="subsection" id="films">
+                <h3>Films courts</h3>
 
-    <div class="project-grid">
+                <div class="film-grid">
 
-        <div class="project-item">
-            <img src="images/logos_bse.png" alt="Planche concept – Logo de l'association du Master BSE de l'URCA (2023-2024)" class="lightbox-trigger" data-caption="Planche concept – Logo de l'association du Master BSE de l'URCA (2023-2024)">
-        </div>
+                    <div class="film-item">
+                        <div class="thumbnail-wrapper">
+                            <a href="https://youtu.be/t2ujGqYkgPA" target="_blank" rel="noopener">
+                                <img src="images/alea_p.png" alt="2024 - ALEA: a very short film about a casual fisherman">
+                                <div class="overlay"></div>
+                                <div class="play-icon">▶</div>
+                            </a>
+                        </div>
+                        <h4 class="film-title">2024 - ALEA: a very short film about a casual fisherman</h4>
+                        <p class="film-description">Un très court métrage d'animation à portée environnementale.</p>
+                    </div>
 
-        <div class="project-item">
-            <img src="images/poster_laser.png" alt="Poster Association BSE" class="lightbox-trigger" data-caption="Poster Association BSE">
-        </div>
+                    <div class="film-item">
+                        <div class="thumbnail-wrapper">
+                            <a href="https://youtu.be/4tzVZdzYW0U" target="_blank" rel="noopener">
+                                <img src="images/alea_f.png" alt="2024 - ALEA: a very short animated film about a casual hiker">
+                                <div class="overlay"></div>
+                                <div class="play-icon">▶</div>
+                            </a>
+                        </div>
+                        <h4 class="film-title">2024 - ALEA: a very short animated film about a casual hiker</h4>
+                        <p class="film-description">Un très court métrage d'animation à portée environnementale.</p>
+                    </div>
 
-        <div class="project-item">
-            <img src="images/deforestation.png" alt="Visuel concept" class="lightbox-trigger" data-caption="DÉFORESTATION - Concept">
-        </div>
+                    <div class="film-item">
+                        <div class="thumbnail-wrapper">
+                            <a href="https://youtu.be/BJNicD9mzcQ" target="_blank" rel="noopener">
+                                <img src="images/correspondances.png" alt="CORRESPONDANCES">
+                                <div class="overlay"></div>
+                                <div class="play-icon">▶</div>
+                            </a>
+                        </div>
+                        <h4 class="film-title">2024 - CORRESPONDANCES</h4>
+                        <p class="film-description">
+                            Film court réalisé dans le cadre du Nikon Film Festival 2024 sur le thème "Le Feu".
+                        </p>
+                    </div>
 
-        <div class="project-item">
-            <img src="images/oilspill1.png" alt="Visuel concept" class="lightbox-trigger" data-caption="OIL SPILL - Concept 1">
-        </div>
+                    <div class="film-item">
+                        <div class="thumbnail-wrapper">
+                            <a href="https://youtu.be/fXCPoCjIzkU" target="_blank" rel="noopener">
+                                <img src="images/persistance.png" alt="PERSISTANCE">
+                                <div class="overlay"></div>
+                                <div class="play-icon">▶</div>
+                            </a>
+                        </div>
+                        <h4 class="film-title">2023 - PERSISTANCE</h4>
+                        <p class="film-description">
+                            Film court réalisé dans le cadre du concours CROUS 2022/2023 sur le thème "Métamorphose".
+                        </p>
+                    </div>
 
-        <div class="project-item">
-            <img src="images/vertigo.png" alt="Visuel concept" class="lightbox-trigger" data-caption="OIL SPILL - Concept 2">
-        </div>
+                    <div class="film-item">
+                        <div class="thumbnail-wrapper">
+                            <a href="https://youtu.be/zAwCc_IlMxw" target="_blank" rel="noopener">
+                                <img src="images/conception.png" alt="CONCEPTION">
+                                <div class="overlay"></div>
+                                <div class="play-icon">▶</div>
+                            </a>
+                        </div>
+                        <h4 class="film-title">2022 - CONCEPTION</h4>
+                        <p class="film-description">
+                            Film court réalisé dans le cadre du concours CROUS 2021/2022 sur le thème "Rêve".
+                        </p>
+                    </div>
 
-        <div class="project-item">
-            <img src="images/overlay.png" alt="Visuel overlay podcast" class="lightbox-trigger" data-caption="Overlay du Podcast - Point de Sauvegarde">
-        </div>
+                    <div class="film-item">
+                        <div class="thumbnail-wrapper">
+                            <a href="https://youtu.be/AB2MIH1WxCI" target="_blank" rel="noopener">
+                                <img src="images/comme_un_boomerang.png" alt="COMME UN BOOMERANG">
+                                <div class="overlay"></div>
+                                <div class="play-icon">▶</div>
+                            </a>
+                        </div>
+                        <h4 class="film-title">2021 - COMME UN BOOMERANG</h4>
+                        <p class="film-description">
+                            Film court réalisé dans le cadre du concours CROUS 2020/2021 sur le thème "2050".
+                            2ème lauréat régional (CROUS de Strasbourg).
+                        </p>
+                    </div>
 
-        
+                    <div class="film-item">
+                        <div class="thumbnail-wrapper">
+                            <a href="https://youtu.be/Russd6dHGtI" target="_blank" rel="noopener">
+                                <img src="images/dissonances.png" alt="DISSONANCES">
+                                <div class="overlay"></div>
+                                <div class="play-icon">▶</div>
+                            </a>
+                        </div>
+                        <h4 class="film-title">2020 - DISSONANCES</h4>
+                        <p class="film-description">
+                            Film court réalisé dans le cadre du concours CROUS 2019/2020 sur le thème "Alchimie".
+                            2ème lauréat régional (CROUS de Strasbourg).
+                        </p>
+                    </div>
 
-    </div>
-</div>
-
-<!-- Lightbox -->
-<div id="lightbox">
-    <span id="lightbox-close">&times;</span>
-    <img id="lightbox-img" src="">
-    <p id="lightbox-caption"></p>
-</div>
-
-<!-- FILMS COURTS -->
-<div class="subsection" id="films">
-    <h3>Films courts</h3>
-    <div class="film-grid">
-
-        <div class="film-item">
-            <div class="thumbnail-wrapper">
-                <a href="https://youtu.be/t2ujGqYkgPA?si=OVJ_NiIMh303Jvkj" target="_blank">
-                    <img src="images/alea_p.png" alt="2024 - ALEA: a very short film about a casual fisherman">
-                    <div class="overlay"></div>
-                    <div class="play-icon">▶</div>
-                </a>
+                </div>
             </div>
-            <h4 class="film-title">2024 - ALEA: a very short film about a casual fisherman"</h4>
-            <p class="film-description">Un très court métrage d'animation à portée environnementale.
 
-            </p>
-        </div>
+            <!-- ---------- CRÉATIONS MUSICALES ---------- -->
+            <div class="subsection" id="musique">
+                <h3>Créations musicales</h3>
 
-        <div class="film-item">
-            <div class="thumbnail-wrapper">
-                <a href="https://youtu.be/4tzVZdzYW0U?si=krShz9147ivwPSJb" target="_blank">
-                    <img src="images/alea_f.png" alt="2024 - ALEA: a very short animatedfilm about a casual hiker">
-                    <div class="overlay"></div>
-                    <div class="play-icon">▶</div>
-                </a>
+                <div class="project-grid">
+                    <a href="https://www.youtube.com/@CorentinGalinierMusic"
+                       target="_blank"
+                       rel="noopener"
+                       class="youtube-button">
+                        <img src="images/cgmusic.png" alt="Chaîne YouTube">
+                        <span>YouTube CGMusic</span>
+                    </a>
+                </div>
             </div>
-            <h4 class="film-title">2024 - ALEA: a very short animated film about a casual hiker</h4>
-            <p class="film-description">Un très court métrage d'animation à portée environnementale.
 
-            </p>
-        </div>
+        </section>
 
-        <div class="film-item">
-            <div class="thumbnail-wrapper">
-                <a href="https://youtu.be/BJNicD9mzcQ?si=DErIBGHRW33FAjFX" target="_blank">
-                    <img src="images/correspondances.png" alt="CORRESPONDANCES">
-                    <div class="overlay"></div>
-                    <div class="play-icon">▶</div>
-                </a>
-            </div>
-            <h4 class="film-title">2024 - CORRESPONDANCES</h4>
-            <p class="film-description">
-                Film court réalisé dans le cadre du Nikon Film Festival 2024 sur le thème "Le Feu".
-            </p>
-        </div>
-
-        <div class="film-item">
-            <div class="thumbnail-wrapper">
-                <a href="https://youtu.be/fXCPoCjIzkU?si=lad5vC2-2ZY8Ytwf" target="_blank">
-                    <img src="images/persistance.png" alt="PERSISTANCE">
-                    <div class="overlay"></div>
-                    <div class="play-icon">▶</div>
-                </a>
-            </div>
-            <h4 class="film-title">2023 - PERSISTANCE</h4>
-            <p class="film-description">
-                Film court réalisé dans le cadre du concours CROUS 2022/2023 sur le thème "Métamorphose".
-            </p>
-        </div>
-
-        <div class="film-item">
-            <div class="thumbnail-wrapper">
-                <a href="https://youtu.be/zAwCc_IlMxw?si=PppXegW43J4Qmhf6" target="_blank">
-                    <img src="images/conception.png" alt="CONCEPTION">
-                    <div class="overlay"></div>
-                    <div class="play-icon">▶</div>
-                </a>
-            </div>
-            <h4 class="film-title">2022 - CONCEPTION</h4>
-            <p class="film-description">
-                Film court réalisé dans le cadre du concours CROUS 2021/2022 sur le thème "Rêve".
-            </p>
-        </div>
-
-        <div class="film-item">
-            <div class="thumbnail-wrapper">
-                <a href="https://youtu.be/AB2MIH1WxCI?si=j2uuD-AF0NwZw_AU" target="_blank">
-                    <img src="images/comme_un_boomerang.png" alt="COMME UN BOOMERANG">
-                    <div class="overlay"></div>
-                    <div class="play-icon">▶</div>
-                </a>
-            </div>
-            <h4 class="film-title">2021 - COMME UN BOOMERANG</h4>
-            <p class="film-description">
-                Film court réalisé dans le cadre du concours CROUS 2020/2021 sur le thème "2050".
-                2ème lauréat régional (CROUS de Strasbourg).
-            </p>
-        </div>
-
-        <div class="film-item">
-            <div class="thumbnail-wrapper">
-                <a href="https://youtu.be/Russd6dHGtI?si=xnPyWdGZ72gxhlES" target="_blank">
-                    <img src="images/dissonances.png" alt="DISSONANCES">
-                    <div class="overlay"></div>
-                    <div class="play-icon">▶</div>
-                </a>
-            </div>
-            <h4 class="film-title">2020 - DISSONANCES</h4>
-            <p class="film-description">
-                Film court réalisé dans le cadre du concours CROUS 2019/2020 sur le thème "Alchimie".
-                2ème lauréat régional (CROUS de Strasbourg).
-            </p>
-        </div>
-
-    </div>
-</div>
-<!-- CRÉATIONS MUSICALES -->
-<div class="subsection" id="musique">
-    <h3>Créations musicales</h3>
-    <div class="project-grid">
-
-        <a href="https://www.youtube.com/@CorentinGalinierMusic"
-           target="_blank"
-           class="youtube-button">
-
-            <img src="images/cgmusic.png" alt="Chaîne YouTube">
-            <span>YouTube CGMusic</span>
-
-        </a>
-
-    </div>
-</div>
-
-
-</section>
-
-        <!-- Footer -->
+        <!-- ================= FOOTER ================= -->
         <footer>
             <p>© 2026</p>
         </footer>
+
     </div>
 
-    <script src="script.js"></script>
+    <!-- ================= LIGHTBOX (images) ================= -->
+    <div id="lightbox">
+        <span id="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+        <p id="lightbox-caption"></p>
+    </div>
+
 </body>
 </html>
