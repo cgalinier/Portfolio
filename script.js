@@ -1,4 +1,18 @@
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
+
+    console.log("script.js v4 chargé");
+
+    /* ================= LIGNES ANIMÉES ================= */
+    const linesContainer = document.getElementById('linesContainer');
+    if (linesContainer && linesContainer.children.length === 0) {
+        for (let i = 0; i < 20; i++) {
+            const line = document.createElement('div');
+            line.className = 'line' + (i % 5 === 0 ? ' thick' : '');
+            line.style.left = (i * 5) + '%';
+            line.style.animationDelay = (i * 0.4) + 's';
+            linesContainer.appendChild(line);
+        }
+    }
 
     /* ================= MODAL VIDEO ================= */
     const modal = document.getElementById("video-modal");
@@ -28,17 +42,22 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    /* ================= ONGLET PROJETS ================= */
-    const buttons = document.querySelectorAll('.tab-button');
-    const contents = document.querySelectorAll('.tab-content');
+    /* ================= ONGLETS PROJETS ================= */
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
 
-    buttons.forEach(button => {
+    const activateTab = (tab) => {
+        tabButtons.forEach(b => b.classList.remove('active'));
+        tabContents.forEach(c => c.classList.remove('active'));
+        tab.classList.add('active');
+        const btn = document.querySelector(`.tab-button[data-tab="${tab.id}"]`);
+        if (btn) btn.classList.add('active');
+    };
+
+    tabButtons.forEach(button => {
         button.addEventListener('click', () => {
-            buttons.forEach(btn => btn.classList.remove('active'));
-            contents.forEach(content => content.classList.remove('active'));
-            button.classList.add('active');
             const target = document.getElementById(button.dataset.tab);
-            if (target) target.classList.add('active');
+            if (target) activateTab(target);
         });
     });
 
@@ -61,28 +80,44 @@ document.addEventListener("DOMContentLoaded", function() {
             lightbox.style.display = 'none';
         });
 
-        // fermer au clic sur le fond
         lightbox.addEventListener('click', (e) => {
             if (e.target === lightbox) lightbox.style.display = 'none';
         });
     }
 
-            /* ================= MENU DÉROULANT (MOBILE) ================= */
+    /* ================= MENU DÉROULANT + NAVIGATION ================= */
     const dropdown = document.querySelector('.dropdown');
     const dropbtn = document.querySelector('.dropbtn');
     const dropContent = document.querySelector('.dropdown-content');
 
+    const isMobile = () => window.matchMedia('(hover: none), (max-width: 900px)').matches;
+
+    const closeMenu = () => {
+        if (!dropdown) return;
+        dropdown.classList.remove('open');
+        if (dropContent) dropContent.style.display = '';
+    };
+
+    // Active l'onglet qui contient la cible, puis défile jusqu'à elle
+    const goToSection = (id) => {
+        const target = document.getElementById(id);
+        if (!target) {
+            console.warn("Section introuvable :", id);
+            return;
+        }
+        const tab = target.closest('.tab-content');
+        if (tab) activateTab(tab);
+
+        setTimeout(() => {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 80);
+    };
+
     if (dropdown && dropbtn && dropContent) {
 
-        const isMobile = () => window.matchMedia('(hover: none), (max-width: 900px)').matches;
-
-        const closeMenu = () => {
-            dropdown.classList.remove('open');
-            dropContent.style.display = '';
-        };
-
+        // Toucher sur "Projets ▾"
         dropbtn.addEventListener('click', (e) => {
-            if (!isMobile()) return;          // sur ordinateur : survol CSS
+            if (!isMobile()) return;          // ordinateur : survol CSS
             e.preventDefault();
             e.stopPropagation();
 
@@ -94,15 +129,22 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
-        // Clic sur un sous-lien : on referme, la navigation se fait normalement
+        // Toucher sur un sous-lien
         dropContent.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => closeMenu());
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const id = link.getAttribute('href').replace('#', '');
+                closeMenu();
+                goToSection(id);
+            });
         });
 
-        // Clic en dehors : on referme
+        // Toucher en dehors du menu
         document.addEventListener('click', (e) => {
             if (!dropdown.contains(e.target)) closeMenu();
         });
+    } else {
+        console.warn("Menu déroulant introuvable dans le HTML");
     }
 
 });
