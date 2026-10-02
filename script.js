@@ -1,23 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    console.log("script.js v4 chargé");
-
-    /* ================= LIGNES ANIMÉES ================= */
-    const linesContainer = document.getElementById('linesContainer');
-    if (linesContainer && linesContainer.children.length === 0) {
-        for (let i = 0; i < 20; i++) {
-            const line = document.createElement('div');
-            line.className = 'line' + (i % 5 === 0 ? ' thick' : '');
-            line.style.left = (i * 5) + '%';
-            line.style.animationDelay = (i * 0.4) + 's';
-            linesContainer.appendChild(line);
-        }
-    }
+    console.log("script.js v5 chargé");
 
     /* ================= MODAL VIDEO ================= */
     const modal = document.getElementById("video-modal");
     const iframe = document.getElementById("video-frame");
-    const closeBtn = document.querySelector(".close");
+    const closeBtn = document.querySelector("#video-modal .close");
 
     if (modal && iframe && closeBtn) {
         document.querySelectorAll(".video-link").forEach(link => {
@@ -34,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
             iframe.src = "";
         });
 
-        window.addEventListener("click", e => {
+        modal.addEventListener("click", e => {
             if (e.target === modal) {
                 modal.style.display = "none";
                 iframe.src = "";
@@ -58,6 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener('click', () => {
             const target = document.getElementById(button.dataset.tab);
             if (target) activateTab(target);
+            else console.warn("Onglet introuvable :", button.dataset.tab);
         });
     });
 
@@ -85,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    /* ================= MENU DÉROULANT + NAVIGATION ================= */
+    /* ================= NAVIGATION + MENU DÉROULANT ================= */
     const dropdown = document.querySelector('.dropdown');
     const dropbtn = document.querySelector('.dropbtn');
     const dropContent = document.querySelector('.dropdown-content');
@@ -98,53 +87,31 @@ document.addEventListener("DOMContentLoaded", function () {
         if (dropContent) dropContent.style.display = '';
     };
 
-    // Active l'onglet qui contient la cible, puis défile jusqu'à elle
     const goToSection = (id) => {
         const target = document.getElementById(id);
         if (!target) {
             console.warn("Section introuvable :", id);
             return;
         }
+        // Si la cible est dans un onglet (ou est un onglet), on l'active d'abord
         const tab = target.closest('.tab-content');
         if (tab) activateTab(tab);
 
         setTimeout(() => {
             target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }, 80);
+        }, 100);
     };
 
-    if (dropdown && dropbtn && dropContent) {
+    // Un seul écouteur pour tous les liens "#..." de la nav
+    document.querySelector('nav')?.addEventListener('click', (e) => {
+        const link = e.target.closest('a');
+        if (!link) return;
 
-        // Toucher sur "Projets ▾"
-        dropbtn.addEventListener('click', (e) => {
-            if (!isMobile()) return;          // ordinateur : survol CSS
-            e.preventDefault();
-            e.stopPropagation();
+        const href = link.getAttribute('href') || '';
+        if (!href.startsWith('#')) return;
 
-            if (dropdown.classList.contains('open')) {
-                closeMenu();
-            } else {
-                dropdown.classList.add('open');
-                dropContent.style.display = 'block';
-            }
-        });
+        e.preventDefault();
 
-        // Toucher sur un sous-lien
-        dropContent.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-                const id = link.getAttribute('href').replace('#', '');
-                closeMenu();
-                goToSection(id);
-            });
-        });
-
-        // Toucher en dehors du menu
-        document.addEventListener('click', (e) => {
-            if (!dropdown.contains(e.target)) closeMenu();
-        });
-    } else {
-        console.warn("Menu déroulant introuvable dans le HTML");
-    }
-
-});
+        // Bouton "Projets ▾"
+        if (link === dropbtn) {
+            if

@@ -21,42 +21,6 @@ body{
 }
 
 /* ==========================================================
-   LIGNES ANIMÉES
-========================================================== */
-
-.lines-container{
-    position:fixed;
-    inset:0;
-    width:100%;
-    height:100%;
-    pointer-events:none;
-    z-index:1;
-}
-
-.line{
-    position:absolute;
-    width:1px;
-    height:100%;
-    background:#fff;
-    opacity:.15;
-    animation:moveLine 8s ease-in-out infinite;
-}
-
-.line.thick{
-    width:2px;
-    opacity:.25;
-}
-
-@keyframes moveLine{
-    0%,100%{
-        transform:translateX(0);
-    }
-    50%{
-        transform:translateX(100px);
-    }
-}
-
-/* ==========================================================
    CONTENEUR
 ========================================================== */
 
