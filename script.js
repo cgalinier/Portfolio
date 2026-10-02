@@ -67,29 +67,41 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
-    /* ================= MENU DÉROULANT (MOBILE) ================= */
+            /* ================= MENU DÉROULANT (MOBILE) ================= */
     const dropdown = document.querySelector('.dropdown');
     const dropbtn = document.querySelector('.dropbtn');
+    const dropContent = document.querySelector('.dropdown-content');
 
-    if (dropdown && dropbtn) {
-        // Toucher sur "Projets ▾" : ouvre/ferme le menu au lieu de naviguer
+    if (dropdown && dropbtn && dropContent) {
+
+        const isMobile = () => window.matchMedia('(hover: none), (max-width: 900px)').matches;
+
+        const closeMenu = () => {
+            dropdown.classList.remove('open');
+            dropContent.style.display = '';
+        };
+
         dropbtn.addEventListener('click', (e) => {
-            if (window.matchMedia('(hover: none), (max-width: 768px)').matches) {
-                e.preventDefault();
-                dropdown.classList.toggle('open');
+            if (!isMobile()) return;          // sur ordinateur : survol CSS
+            e.preventDefault();
+            e.stopPropagation();
+
+            if (dropdown.classList.contains('open')) {
+                closeMenu();
+            } else {
+                dropdown.classList.add('open');
+                dropContent.style.display = 'block';
             }
         });
 
-        // Toucher sur un sous-lien : on referme le menu, la navigation se fait normalement
-        dropdown.querySelectorAll('.dropdown-content a').forEach(link => {
-            link.addEventListener('click', () => dropdown.classList.remove('open'));
+        // Clic sur un sous-lien : on referme, la navigation se fait normalement
+        dropContent.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => closeMenu());
         });
 
-        // Toucher en dehors du menu : on le ferme
+        // Clic en dehors : on referme
         document.addEventListener('click', (e) => {
-            if (!dropdown.contains(e.target)) {
-                dropdown.classList.remove('open');
-            }
+            if (!dropdown.contains(e.target)) closeMenu();
         });
     }
 
